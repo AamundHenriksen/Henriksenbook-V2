@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henriksenbook V2</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="JS/model.js"></script>
+    <script src="JS/common.js"></script>
+    <script src="JS/loginView.js"></script>
+    <script src="JS/loginController.js"></script>
+    <script src="JS/registerView.js"></script>
+    <script src="JS/registerController.js"></script>
+    <script src="JS/homepageView.js"></script>
+    <script src="JS/homepageController.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        updateView()
+        function updateView() {
+            model.current_page === "login" ? loginView()
+
+            : model.current_page === "register" ? registerView()
+
+            : model.current_page === "homepage" ? homepageView()
+            
+            : console.log("ERROR: Page doesn't exist")
+        }
+    </script>
+</body>
+</html>
